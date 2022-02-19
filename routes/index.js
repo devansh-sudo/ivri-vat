@@ -7,7 +7,7 @@ const Doctor = require("../models/DoctorModel");
 const callStatus = require("../models/callStatus");
 const Specialization = require("../models/specializationCategory");
 const jwtrequire = require("../middlewares/jwt");
-
+var ProblemDetail = require('../models/problemdetail')
 // REGISTER USER
 router.post("/register", async (req, res) => {
   try {
@@ -308,6 +308,14 @@ router.get("/getSpecialization", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+// for selecting problemDetail
+router.get("/problemDetail/:speciesId/:problemid", (req, res) => {
+  console.log(req.params.speciesId,req.params.problemid)
+  const {speciesId,problemid}=req.params
+  ProblemDetail.find(
+    {speciesId,problemid}).then((problem_detail) => res.json(problem_detail));
 });
 
 module.exports = router;
