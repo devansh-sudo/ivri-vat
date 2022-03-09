@@ -56,6 +56,9 @@ app.use("/users", usersRouter);
 app.use("/add", require("./controller/addDetails"));
 
 // for selecting species
+app.get("/", (req, res) => {
+  res.send('App works fine....')
+});
 app.get("/species", (req, res) => {
   Species.find().then((specie) => res.json(specie));
 });
