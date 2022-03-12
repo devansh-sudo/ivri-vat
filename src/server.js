@@ -51,8 +51,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use(cors());
 app.use(cors({ origin: true, credentials: true }));
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+// app.use("/", indexRouter);
+// app.use("/users", usersRouter);
 app.use("/add", addDetailsRouter);
 
 // form APIs
