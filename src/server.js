@@ -17,7 +17,7 @@ var mongoose = require("mongoose");
 
 MONGODB_URL =
   "mongodb+srv://IndVet:ariscell@cluster0.pd62f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-  
+
 mongoose
   .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
@@ -54,7 +54,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 // form APIs
-app.use("/add", require("../controller/addDetails"));
+// app.use("/add", require("../controller/addDetails"));
 
 
 // for main routing
