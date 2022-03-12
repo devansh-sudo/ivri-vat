@@ -10,6 +10,7 @@ var Problem = require("../models/problem");
 var ProblemDetail = require("../models/problemdetail");
 var indexRouter = require("../routes/index");
 var usersRouter = require("../routes/users");
+var addDetailsRouter = require('../controller/addDetails');
 
 // DB connection
 
@@ -52,6 +53,7 @@ app.use(cors({ origin: true, credentials: true }));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/add", addDetailsRouter);
 
 // form APIs
 // app.use("/add", require("../controller/addDetails"));
