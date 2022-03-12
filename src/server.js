@@ -5,11 +5,11 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 require("dotenv").config();
 var cors = require("cors");
-var Species = require("./models/species");
-var Problem = require("./models/problem");
-var ProblemDetail = require("./models/problemdetail");
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+var Species = require("../models/species");
+var Problem = require("../models/problem");
+var ProblemDetail = require("../models/problemdetail");
+var indexRouter = require("../routes/index");
+var usersRouter = require("../routes/users");
 
 // DB connection
 
@@ -53,7 +53,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 // form APIs
-app.use("/add", require("./controller/addDetails"));
+app.use("/add", require("../controller/addDetails"));
 
 
 // for main routing
