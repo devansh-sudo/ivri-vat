@@ -10,7 +10,7 @@ var Problem = require("../models/problem");
 var ProblemDetail = require("../models/problemdetail");
 var indexRouter = require("../routes/index");
 var usersRouter = require("../routes/users");
-var addDetailsRouter = require('../controller/addDetails');
+var addDetailsRouter = require('../routes/addDetails');
 
 // DB connection
 
