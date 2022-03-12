@@ -55,7 +55,8 @@ app.use("/users", usersRouter);
 // form APIs
 app.use("/add", require("./controller/addDetails"));
 
-// for selecting species
+
+// for main routing
 app.get("/", (req, res) => {
   res.send('App works fine....')
 });
@@ -109,4 +110,11 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-module.exports = app;
+const port = process.env.PORT || 3000;
+
+// app listening
+app.listen(port, ()=>{
+  console.log(`App listen on port ${port}`);
+})
+
+// module.exports = app;
