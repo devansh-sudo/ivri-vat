@@ -22,7 +22,7 @@ mongoose
   .then(() => {
     //don't show the log when it is test
     if (process.env.NODE_ENV !== "test") {
-      console.log("Connected to %s", MONGODB_URL);
+      console.log("Connected to Database...");
       console.log("App is running ... \n");
       console.log("Press CTRL + C to stop the process. \n");
     }
